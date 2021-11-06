@@ -1,0 +1,14 @@
+﻿@model ASP.NET_lab3.Models.NameFormModel
+@{
+    ViewData["Title"] = "Form1";
+}
+
+<div class="text-left">
+    <h1 class="display-4">Dane z formularza</h1>
+    @{
+        @for (var counter = 0; counter < (Model.Repeats); counter++)
+        {
+            <p>@Html.DisplayNameFor(model => model.Name): <strong>@Html.DisplayFor(model => model.Name)</strong></p>
+        }
+    }
+</div>
